@@ -1,0 +1,201 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Static CSS-->
+    <link rel="stylesheet" href="{% static 'main_app/main.css' %}">
+    <!--Bulma CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/4156d66cb5.js" crossorigin="anonymous"></script>
+   </head>
+<body>
+    <!--Bulma Nav bar-->
+    <nav class="navbar is-success-mobile" role="navigation" aria-lable="main navigation">
+        <div class="navbar-brand poppins-medium is-size-6-mobile is-size-4-tablet is-size-4-desktop">
+            <a href="{% url 'Home' %}" class="navbar-item has-text-black">
+                Navbar
+            </a>
+
+            <a role="button" class="navbar-burger" data-target="navMenu" aria-lable="menu" aria-expanded="flase">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="navMenu" class="navbar-menu">
+            <div class="navbar-start">
+
+            </div>
+            <div class="navbar-end">
+              <a href="#" class="navbar-item custom-navbar-item is-size-7-mobile is-size-6-tablet is-size-6-desktop">Services</a>
+                
+                <a href="#" class="navbar-item custom-navbar-item is-size-7-mobile is-size-6-tablet is-size-6-desktop">Results</a>
+
+                <a href="#" class="navbar-item custom-navbar-item is-size-7-mobile is-size-6-tablet is-size-6-desktop">About Us</a>
+                
+                <a href="#" class="navbar-item custom-navbar-item is-size-7-mobile is-size-6-tablet is-size-6-desktop">Blog</a>
+
+                {% if user.is_authenticated %}
+                <a href="{% url 'Account' %}" class="navbar-item custom-navbar-item is-size-7-mobile is-size-6-tablet is-size-6-desktop">My Account</a>
+                {% else %}
+                <a href="{% url 'Login Page' %}" class="navbar-item custom-navbar-item is-size-7-mobile is-size-6-tablet is-size-6-desktop">My Account</a>
+                {% endif %}
+
+                <div class="navbar-item">
+                  <div class="buttons">
+                    <a href="" class="button is-rounded is-black">Talk to Us</a>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    {% block content %}
+
+    {% endblock content %}
+
+    <footer class="footer has-background-light">
+      <div class="content">
+        <div class="columns">
+          <div class="column  has-text-left">
+            <div class="columns is-desktop">
+              <div class="column">
+                <h3 class="poppins-medium is-size-4-tablet is-size-4-desktop">Navbar</h3>
+              </div>
+              <div class="column is-7">
+                <p class="poppins-regular is-size-7-tablet is-size-7-desktop">We will help you show you ads to reach more people for less money</p>
+              </div>
+              <div class="column">
+                <div class="columns">
+                  <div class="column is-2">
+                    <i class="fa-brands fa-facebook fa-lg"></i>
+                  </div>
+                  <div class="column is-2">
+                    <i class="fa-brands fa-twitter fa-lg"></i>
+                  </div>
+                  <div class="column is-2">
+                    <i class="fa-brands fa-instagram fa-lg"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-7 ">
+            <div class="columns">
+              <div class="column">
+                <p class="poppins-medium">Sales</p>
+                <div class="columns is-desktop is-size-7-tablet is-size-7-desktop">
+                  <div class="column">
+                    <p>Social Ads</p>
+                  </div>
+                  <div class="column">
+                    <p>SaaS marketing</p>
+                  </div>
+                  <div class="column">
+                    <p>Content marketing</p>
+                  </div>
+                  <div class="column">
+                    <p>SEO</p>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <p class="poppins-medium">Support</p>
+                <div class="columns is-desktop is-size-7-tablet is-size-7-desktop">
+                  <div class="column">
+                    <p>Pricing</p>
+                  </div>
+                  <div class="column">
+                    <p>Documentation</p>
+                  </div>
+                  <div class="column">
+                    <p>Guides</p>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <p class="poppins-medium">Company</p>
+                <div class="columns is-desktop is-size-7-tablet is-size-7-desktop">
+                  <div class="column">
+                    <p>About</p>
+                  </div>
+                  <div class="column">
+                    <p>Blog</p>
+                  </div>
+                  <div class="column">
+                    <p>Press</p>
+                  </div>
+                  <div class="column">
+                    <p>Partners</p>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <p class="poppins-medium">Legal</p>
+                <div class="columns is-desktop is-size-7-tablet is-size-7-desktop">
+                  <div class="column">
+                    <p>Claim</p>
+                  </div>
+                  <div class="column">
+                    <p>Privacy</p>
+                  </div>
+                  <div class="column">
+                    <p>Terms</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+          
+            // Add a click event on each of them
+            $navbarBurgers.forEach( el => {
+              el.addEventListener('click', () => {
+          
+                // Get the target from the "data-target" attribute
+                const target = el.dataset.target;
+                const $target = document.getElementById(target);
+          
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                el.classList.toggle('is-active');
+                $target.classList.toggle('is-active');
+          
+              });
+            });
+          
+          });
+    </script>
+    <script>
+      function toggleParagraph(boxId){
+          const questionBox = document.getElementById(boxId);
+          const hiddenParagraph = questionBox.querySelector('.hidden-paragraph');
+
+          if (hiddenParagraph.style.display === 'none' || hiddenParagraph.style.display === ''){
+            hiddenParagraph.style.display = 'block';
+            hiddenParagraph.style.opacity = 1;
+            hiddenParagraph.style.transition = 'opacity 0.3s, display 0.3s ease';
+            questionBox.style.height = 'auto';
+            questionBox.style.transition = 'background-color 0.3s ease, height 0.8s ease'
+            questionBox.style.backgroundColor = 'rgb(157, 233, 147)'
+          }else{ 
+            hiddenParagraph.style.display = 'none';
+            hiddenParagraph.style.opacity = 0;
+            hiddenParagraph.style.transition = 'opacity 0.3s ease, display 0.3s ease';
+            questionBox.style.height = '45px'
+            questionBox.style.transition = 'background-color 0.3s ease, height 0.8s ease'
+            questionBox.style.backgroundColor = 'rgb(255, 255, 255)';
+          }
+      }
+  </script>
+</body>
+</html>

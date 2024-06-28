@@ -1,0 +1,84 @@
+{% extends "main_app/base.html" %}
+{% load static %}
+{% load socialaccount %}
+{% block content %}
+<style>
+    .main_image {
+        background-image: url("{% static 'main_app/images/register_image.png' %}");
+        background-position:  center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+<section class="hero is-small rl_image">
+    <div class="hero-body">
+        <div class="columns is-centered">
+            <div class="column is-half">
+                {% if user.is_authenticated %}
+                
+                {% else %}
+                <form method="POST" class="box has-background-light">{% csrf_token %}
+                    
+                    <h1 class="title">Register</h1>
+                    <p class="subtitle is-size-6-desktop">Don't have an account? Create your account, it takes less than a minute.</p>
+
+                    
+                    <div class="field">
+                        <p class="control has-icons-left">
+                            <input id="username" name="username" type="text" class="input" placeholder="Username">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-user"></i>
+                            </span>
+                        </p>
+                    </div>
+
+                    <div class="field">
+                        <p class="control has-icons-left">
+                            <input id="first_name" name="first_name" type="text" class="input" placeholder="First name">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-user"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                            <input id="email" name="email" type="email" class="input" placeholder="Email">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                            <span class="icon is-small is-right"><!--Hidden Icon use javascript to show it -->
+                                <i class="fas fa-check"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="field">
+                        <p class="control has-icons-left">
+                            <input id="password" name="password1" type="password" class="input" placeholder="Password">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="field">
+                        <p class="control has-icons-left">
+                            <input id="password2" name="password2" type="password" class="input" placeholder="Confirm Password">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="field">
+                        <p class="control">
+                            <button type="submit" class="button is-rounded is-black">Register</button>
+                        </p>
+                    </div>
+                </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock content %}

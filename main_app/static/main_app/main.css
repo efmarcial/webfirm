@@ -1,0 +1,351 @@
+/*Custom Google Font Poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@300&display=swap');
+
+
+
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  .poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+
+/* Navbar items */
+.custom-navbar-item {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.center-div {
+    display: flex;
+    justify-content: center;
+}
+
+.main_background {
+    background-image: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), /* Used this to make the background image darker */
+    url('images/main_background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.wave_background {
+  background-image: url('images/wave_background.png');
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position: center;
+}
+
+.service_icon {
+  width: 150px; /*Set the initial width */
+  transition: width 0.3s ease; /* Add a smooth transition effect*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service_icon img {
+  width: 100%; /* Make sure the image takes the full width of its container */
+}
+
+.service_icon h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.service_icon:hover {
+  width: 200px; /* Set the width on hover to make it larger */
+}
+
+.custom-box {
+  position: relative; /* Add relative positioning for absolute positioning of the image */
+  width: 100%;
+  height: 150px;
+  background-color: white;
+  border: 2px solid #000;
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Align content to the bottom */
+  transition: background-color 0.3s, height 0.3s, color 0.3s; /* Smooth transition for backgroud color and height*/
+  overflow: hidden; /* Hide overflow to prevent image spilling out */
+}
+
+.custom-box h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: large;
+  color: black;
+  transition: font-size 0.3s, color 0.3s;
+}
+
+.custom-box:hover {
+  background-color: black;
+  height: 175px;
+  color: white;
+}
+
+.custom-box:hover h3 {
+  font-size: x-large;
+  color: white;
+}
+
+
+.custom-box p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #000;
+  font-size: x-small;
+  transition: font-size 0.3s, color 0.3s;
+}
+
+.custom-box:hover p {
+  font-size: small;
+  color: white;
+  
+}
+
+.custom-box a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  opacity: 0; /* initial hidden */
+  background-color: white;
+  color: white;
+  display: none;
+  transform: scale(0.1);
+  transition:color 0.3s, background-color 0.3s, opacity 0.3s, transform 0.3s, display 0.5s;
+}
+
+.custom-box:hover a {
+  background-color:black;
+  color: white;
+  opacity: 1; /* Show the button */
+  display: block;
+  transform: scale(.8);
+}
+
+
+/* Show image on hover */
+.custom-box:hover img {
+  opacity: 1; /* Show image on hover */
+  transform: translate(-50%, -50%) scale(0.3); /* Increase scale on hover */
+}
+
+.question-box {
+  width: 100%;
+  height: 45px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid #000;
+  border-radius: 15px;
+  padding: 10px;
+  transition: background-color 0.3s, height 0.8s; /* Smooth transition for backgroud color and height*/
+}
+
+
+.question-box h3 {
+  margin: 0; /* Remove default margin */
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: medium;
+  color: black;
+  transition: font-size 0.3s, color 0.3s;
+}
+
+.plus-icon {
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+  transition: font-size 0.3s;
+}
+
+.plus-icon:hover {
+  color: rgb(137, 211, 127);
+  font-size: 18px;
+  transition: font-size 0.3s;
+}
+
+.hidden-paragraph {
+  display: none;
+  opacity: 0; /* This display 0 */
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  transition: opacity 0.3s, display 0.3s;
+}
+
+.hidden-paragraph hr {
+  margin: 0;
+  margin-bottom: 4px;
+  padding: 0;
+  background-color: black;
+}
+
+
+.blog-box {
+  width: 100%;
+  height: 150px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid #000;
+  border-radius: 15px;
+  padding: 10px;
+  transition: background-color 0.3s, height 0.8s; /* Smooth transition for backgroud color and height*/
+}
+
+#blog1 {
+  background-color: bisque;
+}
+
+#blog2 {
+  background-color: rgb(157, 233, 147);
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-hr-container {
+  width: 90%;
+}
+
+.centered-hr {
+  border: none;
+  border-top: 2px solid #000;
+  margin: 0;
+  width: 100%;
+}
+
+.faq-img {
+  width: 200px;
+}
+
+.options-box {
+  width: 100%;
+  height: 150px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid #000;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 15px;
+}
+
+.rl_image {
+        background-image: url("images/register_image.png");
+        background-position:  center;
+        background-repeat: no-repeat;
+        background-size: cover;
+  }

@@ -1,0 +1,353 @@
+{% extends "main_app/base.html" %}
+{% load static %}
+{% block content %}
+<!--Main body-->
+<section class="hero is-medium has-background-light">
+    <div class="hero-body">
+        <div class="container">
+            
+            <div class="columns is-centered">
+                <!--Left column for the text, has nested columns inside-->
+                <div class="column is-three-fifths">
+                    
+                    <div class="columns is-centered">
+                        <div class="column">
+                            <h1 class="poppins-medium is-size-2-tablet is-size-1-desktop">Elevate Your Voice</h1>
+                            <h1 class="poppins-medium is-size-2-tablet is-size-1-desktop has-text-success">Ignite Your Presence</h1>
+                            
+                        </div>
+                    </div>
+
+                    <div class="columns is-centered">
+                        <div class="column">
+                            <p class="poppins-regular">For Marketing Innovators, E-Commerce Trailblazers, and Small Businesses with Big Dreams. Ignite Your Digital Presence with Designs That Speak Volumes.</p>
+                            <br>
+                            {% if user.is_authenticated %}
+                            <a href="{% url 'Account' %}" class="button is-black is-rounded poppins-regular is-hovered">My Account</a>
+                            {% else %}
+                            <a href="{% url 'Register' %}" class="button is-black is-rounded poppins-regular is-hovered">Register</a>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="column has-text-centered"><!--Right column for the images, no nested columns inside-->
+
+                    <img src="{% static 'main_app/images/first_image.png' %}" alt="">
+                </div>
+                
+            </div>
+            <div class="columns is-centered">
+                <div class="column is-half has-text-left">
+                    <p class="poppins-regular is-size-7-tablet is-size-7-desktop">We will help you showcase your business to more people for less money.</p>
+                </div>
+                <div class="column is-half has-text-right">
+                    <p class="poppins-regular is-size-7-tablet is-size-7-desktop">EXPLORE &#x2198;</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<!--Testimonals-------------------------->
+<section class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <div class="columns is-desktop">
+                        <div class="column">
+                            <h3 class="poppins-medium is-size-5-tablet is-size-5-dektop has-text-weight-bold"><strong class="has-text-primary is-size-1-tablet is-size-1-desktop">"</strong>Thier experience helped up to develope the business as a whole</h3>
+                        </div>
+                        <div class="column">
+                            <p class="is-size-7-tablet is-size-7-desktop poppins-regular">The MLab team has played an important role in providing us with forward-thinking markiing support that influences growth. When I turned to MLab exports, I had 10 employees and few sales, Now I have 26 employees in my team and the number of sales has increased 3 times</p>
+                        </div>
+                        <div class="column">
+                            <div class="columns">
+                                <div class="column is-2 has-text-center">
+                                    <figure class="image is-64x64">
+                                        <img class="is-rounded" src="{% static 'main_app/images/profile1.png' %}" alt="">
+                                    </figure>
+                                </div>
+                                <div class="column has-text-left">
+                                    <h4 class="poppins-medium">Name</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="columns is-desktop">
+                        <div class="column">
+                            <h3 class="poppins-medium is-size-5-tablet is-size-5-desktop has-text-weight-bold"><strong class="has-text-warning is-size-1-tablet is-size-1-desktop">"</strong>The MLab is fast, tech savy, and truly ahead of the curve.</h3>
+                        </div>
+                        <div class="column">
+                            <p class="poppins-regular is-size-7-tablet is-size-7-desktop">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet velit quis mauris egestas, in vestibulum dolor ullamcorper. Duis faucibus arcu ut euismod consequat. Proin vestibulum neque et neque venenatis suscipit. Aliquam euismod ante ipsum, et euismod ipsum consectetur dapibus.</p>
+                        </div>
+                        <div class="column">
+                            <div class="columns">
+                                <div class="column is-2 has-text-center">
+                                    <figure class="image is-64x64">
+                                        <img class="is-rounded" src="{% static 'main_app/images/profile2.jpg' %}" alt="" >
+                                    </figure>
+                                </div>
+                                <div class="column has-text-left">
+                                    <h4 class="poppins-medium">Name</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Services-->
+<section class="hero">
+    <div class="hero-body">
+        <div class="columns">
+            <!--Not Nested Column-->
+            <div class="column">
+                <h1 class="poppins-medium is-size-2-tablet is-size-2-desktop">Our<br>Services</h1>
+                <p class="poppins-regular is-size-6-tablet is-size-6-desktop">Crafting Digital Experiences Tailored to Your Vision and Goals. We focus on the data that is really important for making each of our decisions, constantly testing, configuring and optimizing processes.</p>
+                <br>
+                <a href="#" class="button is-black is-rounded poppins-regular is-hovered">Learn More</a>
+            </div>
+            <!--Nested Column-->
+            <div class="column is-three-fifths">
+                <div class="columns is-centered"> <!--Firt Row of nested column-->
+                    <div class="column is-half">
+                        <div class="custom-box">
+                            <h3>Custom Web</h3>
+                            <p>We create authentic web content that delivers true value to your audience.</p>
+                            <a href="" class="button is-rounded poppins-regular is-hovered">Learn More</a>   
+                        </div>
+                    </div>
+                    <div class="column is-half">
+                        <div class="custom-box">
+                            
+                            <h3>SEO</h3>
+                            <p>Our SEO works - we know how to drive qualified traffic.</p>
+                            <a href="" class="button is-rounded poppins-regular is-hovered">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns is-centered"><!--Second Row of nested column-->
+                    <div class="column">
+                        <div class="custom-box">
+                            <h3>Hosting</h3>
+                            <p>test paragraph</p>
+                            <a href="" class="button is-rounded poppins-regular is-hovered">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="custom-box">
+                            <h3>Marketing</h3>
+                            <p>Experts work with your business to find potential customers.</p>
+                            <a href="" class="button is-rounded poppins-regular is-hovered">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Demo-->
+<!--IDEA: I can embed an actual website that is live that i can code-into instead of using an image of the website or make the image a live linked image-->
+<section class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns has-text-centered">
+                <div class="column">
+                    <div class="options-box">
+                        <i class="fa-solid fa-headset is-size-2-tablet is-size-2-desktop"></i>
+                        <br>
+                        <p class="poppins-medium is-size-5-tablet is-size-5-desktop">24/7</p>
+                        <p class="poppins-regular is-size-7-tablet is-size-7-desktop">Dedicated Support Team</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="options-box">
+                        <i class="fa-solid fa-desktop is-size-2-tablet is-size-2-desktop"></i>
+                        <br>
+                        <p class="poppins-medium is-size-5-tablet is-size-5-desktop">Responsive</p>
+                        <p class="poppins-regular is-size-7-tablet is-size-7-desktop">Fully Responsive</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="options-box">
+                        Third Box
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="options-box">
+                        Fourth box
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--FAQ Section-->
+<section class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column">
+                    <div class="columns is-desktop">
+                        <div class="column">
+                            <h3 class="poppins-medium is-size-2-tablet is-size-2-desktop">FAQ's</h3>
+                            <a href="#" class="button is-rounded is-black poppins-regular is-hovered">Ask a question</a>
+
+                        </div>
+                        <div class="column">
+                            <img class="faq-img" src="{% static 'main_app/images/FAQ.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-two-thirds"><!--nested columns in here-->
+                    <div class="columns is-desktop">
+                        <div class="column">
+                            <div class="question-box" id="questionBox1">
+
+                                <div class="columns" style="margin-bottom: 0;padding-bottom:0;">
+                                    <div class="column is-10 has-text-left">
+                                        <h3>Do you work with small business?</h3>
+                                    </div>
+                                    <div class="column has-text-right">
+                                        <div class="plus-icon" onclick="toggleParagraph('questionBox1')">
+                                            <span class="fa-stack fa-xs">
+                                                <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                                <i class="fa-solid fa-plus fa-stack-1x fa-inverse"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="paragraph-box hidden-paragraph">
+                                    <hr>
+                                    <p>This is a hidden paragraph</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="question-box" id="questionBox2">
+
+                                <div class="columns" style="margin-bottom: 0;padding-bottom:0;">
+                                    <div class="column is-10 has-text-left">
+                                        <h3>Do you offer ongoing support?</h3>
+                                    </div>
+                                    <div class="column has-text-right">
+                                        <div class="plus-icon" onclick="toggleParagraph('questionBox2')">
+                                            <span class="fa-stack fa-xs">
+                                                <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                                <i class="fa-solid fa-plus fa-stack-1x fa-inverse"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="paragraph-box hidden-paragraph">
+                                    <p>Not only do we offer the expected maintenance and security but we also offer design and market support. Our goal is to become an extension of your in-house marketing team and we tailor a team and offering that empowers your internal team. You can read more about MLab here.</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="question-box" id="questionBox3">
+
+                                <div class="columns" style="margin-bottom: 0;padding-bottom:0;">
+                                    <div class="column is-10 has-text-left">
+                                        <h3>How long does the project take on average?</h3>
+                                    </div>
+                                    <div class="column has-text-right">
+                                        <div class="plus-icon" onclick="toggleParagraph('questionBox3')">
+                                            <span class="fa-stack fa-xs">
+                                                <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                                <i class="fa-solid fa-plus fa-stack-1x fa-inverse"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="paragraph-box hidden-paragraph">
+                                    <p>This is a hidden paragraph</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="question-box" id="questionBox4">
+
+                                <div class="columns" style="margin-bottom: 0;padding-bottom:0;">
+                                    <div class="column is-10 has-text-left">
+                                        <h3>Is there a possiblity of offline meetings?</h3>
+                                    </div>
+                                    <div class="column has-text-right">
+                                        <div class="plus-icon" onclick="toggleParagraph('questionBox4')">
+                                            <span class="fa-stack fa-xs">
+                                                <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                                <i class="fa-solid fa-plus fa-stack-1x fa-inverse"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="paragraph-box hidden-paragraph">
+                                    <p>This is a hidden paragraph</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Blogs-->
+<section class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-6 has-text-left">
+                    <h3 class="poppins-medium is-size-2-tablet is-size-2-desktop">Blog</h3>
+                </div>
+                <div class="column has-text-right">
+                    <p class="poppins-regular is-size-7-tablet is-size-7-desktop">In our blog you can read articles written by experts in the field of marketing and business.</p>
+                </div>
+            </div>
+
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <div id="blog1" class="blog-box">test</div>
+                </div>
+                <div class="column if-half">
+                    <div id="blog2" class="blog-box">test</div>
+                </div>
+            </div>
+
+            <!--Bottom Button-->
+            <div class="columns is-centered">
+                <div class="column is-half has-text-centered">
+                    <a href="#" class="button is-rounded is-black poppins-regular is-hovered">More articles</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="main-container">
+    <div class="centered-hr-container">
+        <hr class="centered-hr">
+    </div>
+</div>
+
+{% endblock content %}
