@@ -31,6 +31,14 @@ def home(request):
 
 def account(request):
     
+    if request.user.is_authenticated:
+        
+        pass
+    
+    else:
+        
+        pass
+    
     
     return render(request, 'main_app/account.html')
 
@@ -80,3 +88,33 @@ def login_page(request):
         print("Error Login")
         pass
     return render(request, 'main_app/login_page.html')
+
+def services(request):
+    return render(request, 'main_app/services.html')
+
+def custom_web(request):
+    return render(request, 'main_app/custom_web.html')
+
+def seo(request):
+    return render(request, 'main_app/seo.html')
+
+def marketing(request):
+    return render(request, 'main_app/marketing.html')
+
+def hosting(request):
+    return render(request, 'main_app/hosting.html')
+
+def article(request):
+    return render(request, 'main_app/articles.html')
+
+def about(request):
+    return render(request, 'main_app/about.html')
+
+def blog(request):
+    return render(request, 'main_app/blog.html')
+
+def results(request):
+    return render(request, 'main_app/results.html')
+
+def contact(request):
+    return render(request, 'main_app/contact.html')
