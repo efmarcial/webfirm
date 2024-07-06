@@ -13,10 +13,10 @@
    </head>
 <body>
     <!--Bulma Nav bar-->
-    <nav class="navbar is-success-mobile" role="navigation" aria-lable="main navigation">
-        <div class="navbar-brand poppins-medium is-size-6-mobile is-size-4-tablet is-size-4-desktop">
+    <nav class="navbar" role="navigation" aria-lable="main navigation">
+        <div class="navbar-brand poppins-medium ">
             <a href="{% url 'Home' %}" class="navbar-item has-text-black">
-                Navbar
+              <img class="brand-logo" src="{% static 'main_app/images/png/logo (1).png' %}" alt="">
             </a>
 
             <a role="button" class="navbar-burger" data-target="navMenu" aria-lable="menu" aria-expanded="flase">
@@ -30,23 +30,23 @@
 
             </div>
             <div class="navbar-end">
-              <a href="{% url 'Services' %}" class="navbar-item custom-navbar-item is-size-7-mobile is-size-6-tablet is-size-6-desktop">Services</a>
+              <a href="{% url 'Services' %}" class="navbar-item custom-navbar-item is-size-7-mobile is-size-7-tablet is-size-7-desktop">Services</a>
                 
-                <a href="{% url 'Results' %}" class="navbar-item custom-navbar-item is-size-7-mobile is-size-6-tablet is-size-6-desktop">Results</a>
+                <a href="{% url 'Results' %}" class="navbar-item custom-navbar-item is-size-7-mobile is-size-7-tablet is-size-7-desktop">Results</a>
 
-                <a href="{% url 'About' %}" class="navbar-item custom-navbar-item is-size-7-mobile is-size-6-tablet is-size-6-desktop">About Us</a>
+                <a href="{% url 'About' %}" class="navbar-item custom-navbar-item is-size-7-mobile is-size-7-tablet is-size-7-desktop">About Us</a>
                 
-                <a href="{% url 'Blog' %}" class="navbar-item custom-navbar-item is-size-7-mobile is-size-6-tablet is-size-6-desktop">Blog</a>
+                <a href="{% url 'Blog' %}" class="navbar-item custom-navbar-item is-size-7-mobile is-size-7-tablet is-size-7-desktop">Blog</a>
 
                 {% if user.is_authenticated %}
-                <a href="{% url 'Account' %}" class="navbar-item custom-navbar-item is-size-7-mobile is-size-6-tablet is-size-6-desktop">My Account</a>
+                <a href="{% url 'Account' %}" class="navbar-item custom-navbar-item is-size-7-mobile is-size-7-tablet is-size-7-desktop">My Account</a>
                 {% else %}
-                <a href="{% url 'Login Page' %}" class="navbar-item custom-navbar-item is-size-7-mobile is-size-6-tablet is-size-6-desktop">My Account</a>
+                <a href="{% url 'Login Page' %}" class="navbar-item custom-navbar-item is-size-7-mobile is-size-7-tablet is-size-7-desktop">My Account</a>
                 {% endif %}
 
                 <div class="navbar-item">
                   <div class="buttons">
-                    <a href="{% url 'contact' %}" class="button is-rounded is-black">Talk to Us</a>
+                    <a href="{% url 'Contact' %}" class="button is-rounded is-black">Talk to Us</a>
                   </div>
                 </div>
             </div>
