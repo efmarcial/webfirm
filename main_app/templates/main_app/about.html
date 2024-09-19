@@ -2,6 +2,111 @@
 {% load static %}
 {% block content %}
 
-<h1>About Page</h1>
+<section class="hero is-medium">
+    <div class="hero-body">
+        <div class="container">
+
+            <div class="columns">
+                <!--Left column for the text, has nested columns inside-->
+                <div class="column is-three-fifths">
+
+                    <div class="columns is-centered">
+                        <div class="column">
+                            <h1 class="poppins-medium is-size-2-tablet is-size-1-desktop">Innovating Tomorrow,</h1>
+                            <h1 class="poppins-medium is-size-2-tablet is-size-1-desktop has-text-success">Empowering Today</h1>
+                        </div>
+                    </div>
+
+                    <div class="columns is-centered">
+                        <div class="column">
+                            <p class="poppins-regular">At MLab, we are a forward-thinking web development firm specializing in creating innovative digital experiences. Our team of experts is dedicated to transforming your ideas into reality, delivering custom solutions tailored to your business needs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Image goes in this column-->
+                <div class="columns has-text-centered">
+                    <img src="{% static 'main_app/images/first_image.png' %}" alt="first image">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="columns is-centered">
+    <div class="column has-text-centered is-three-fifths">
+        <div class="column">
+            <h2 class="poppins-medium is-size-2-tablet is-size-1-desktop">Empowering Digital Transformation</h2>
+        </div>
+    </div>
+</div>
+
+
+<!--Mission and Values-->
+<section class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column ">
+                        <h1 class="poppins-medium is-size-2-tablet is-size-2-desktop">Our Mission</h1>
+                        <p class="poppins-regular">At MLab, our mission is simple yet profound: to empower businesses by harnessing the full potential of modern web technologies. We strive to create impactful, intuitive, and user-centered solutions that help our clients stand out in an ever-evolving digital landscape.</p>
+                    </div>
+
+                
+                <div class="column">
+                     
+                    <h2 class="poppins-medium">Our Values:</h2>
+                    <ul class="poppins-regular">
+                        <li><strong>Innovation: </strong>We believe in constantly pushing the boundaries of technology to deliver cutting-edge solutions.</li>
+                        <li><strong>Collaboration: </strong>Working closely with our clients, we ensure that every project is a partnership built on communication, transparency, and mutual respect.</li>
+                        <li><strong>Excellence: </strong>We are committed to delivering the highest quality of work, ensuring that every solution we build exceeds expectations.</li>
+                        <li><strong>Integrity: </strong>We operate with honesty and accountability, fostering long-term relationships with our clients and partners.</li>
+                        <li><strong>Customer-Centric: </strong>Our clients' success is our success. We prioritize understanding their needs and delivering solutions that truly make a difference.</li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Our Team-->
+<section class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column">
+                    <!--First team member-->
+                </div>
+                <div class="column">
+                    <!--Second team member-->
+                </div>
+            </div>
+            <div class="columns is-centered">
+                <div class="column is-half has-text-centered">
+                    <p class="poppins-regular is-size-6-tablet is-size-5-desktop">Our team is made up of talented developers, designer, and strategist with passion of technology. We work collaboratively to ensure every project is a success.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--Call to action section-->
+<section class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-three-fifths has-text-centered poppins-medium is-size-4-tablet is-size-3-desktop">
+                    <h1>Ready to take your business to the next level?</h1>
+                    <h1>Get in touch with us today to start building your next big project.</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
 {% endblock %}

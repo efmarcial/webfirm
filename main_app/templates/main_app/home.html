@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 <!--Main body-->
-<section class="hero is-medium has-background-light">
+<section class="hero is-medium has-background-light"> 
     <div class="hero-body">
         <div class="container">
             
@@ -20,7 +20,7 @@
 
                     <div class="columns is-centered">
                         <div class="column">
-                            <p class="poppins-regular">For Marketing Innovators, E-Commerce Trailblazers, and Small Businesses with Big Dreams. Ignite Your Digital Presence with Designs That Speak Volumes.</p>
+                            <p class="poppins-regular ">For Marketing Innovators, E-Commerce Trailblazers, and Small Businesses with Big Dreams. Ignite Your Digital Presence with Designs That Speak Volumes.</p>
                             <br>
                             {% if user.is_authenticated %}
                             <a href="{% url 'Account' %}" class="button is-black is-rounded poppins-regular is-hovered">My Account</a>
@@ -52,10 +52,24 @@
         </div>
     </div>
 </section>
+
+<!--Header Section-->
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-three-fifths has-text-centered">
+                    <h1 class="poppins-regular is-size-3-tablet is-size-2-desktop">What we offer is <strong>Peace of Mind</strong></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!--Testimonals-------------------------->
 <section class="hero">
     <div class="hero-body">
-        <div id="testimonals" class="container">
+        <div id="testimonals" class="container scroll-animate section-hidden">
             <div class="columns is-centered">
                 <div class="column is-half">
                     <div class="columns is-desktop">

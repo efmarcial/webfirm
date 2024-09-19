@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from .forms import *  # import all forms 
 from .models import * # import all models
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth.models import User
 
 # Create your views here.
 def home(request):
@@ -32,15 +33,28 @@ def home(request):
 def account(request):
     
     if request.user.is_authenticated:
-        
-        pass
+        current_user = request.user
+        try:
+            #Get user
+            user_object = CustomUser.objects.get(username=current_user)
+        except CustomUser.DoesNotExist:
+            print(
+                "User does not exist"
+            )
     
     else:
         
-        pass
+        print("No current user logged in")
+        return redirect('Home')
+    
+    context = {
+        "username" : user_object.username,
+        "first_name" : user_object.first_name,
+        "email" : user_object.email,
+    }
     
     
-    return render(request, 'main_app/account.html')
+    return render(request, 'main_app/account.html',context=context)
 
 def register(request):
     # Check Post request is true
@@ -59,7 +73,7 @@ def register(request):
                 raw_password = form.cleaned_data.get('password1')
                 user = authenticate(username = user.username, password=raw_password)
                 login(request, user)
-                print("Logged In Succecsfully")
+                print("Logged In Succecsfully......redirecting to account page")
                 return redirect('Account')
         except Exception as e:
             print(e)
@@ -88,6 +102,22 @@ def login_page(request):
         print("Error Login")
         pass
     return render(request, 'main_app/login_page.html')
+
+def logout_user(request):
+    """_summary_
+
+    Args:
+        request user to Logout.
+
+    Returns:
+        after successful logout, redirect to Home page
+    """
+    try:
+        logout(request)
+        return redirect('Home')
+    except Exception as e:
+        print(e)
+        
 
 def services(request):
     return render(request, 'main_app/services.html')

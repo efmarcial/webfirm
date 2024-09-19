@@ -2,7 +2,32 @@
 {% load static %}
 
 {% block content %}
-<div>
-    <p>Account</p>
-</div>
+
+<section class="hero is-small rl_image">
+    <div class="hero-body">
+        <div class="columns is-centered">
+            <div class="column is-four-fifths-desktop">
+                <div class="box has-background-light account_container">
+                    <h1 class="title has-text-weight-bold is-size-1-dekstop">Profile</h1>
+
+                    <form action="">
+
+                        <div class="field">
+                            <label class="label">Username:</label>
+                            <div class="control">
+                                <input id="username" name="username" type="text" class="input" placeholder="{{username}}">
+                            </div>
+                        </div>
+
+                    </form>
+                    
+                    <p class="subtitle is-size-5-desktop">{{username}}</p>
+                    <p class="subtitle is-size-5-desktop">{{first_name}}</p>
+                    <p class="subtitle is-size-5-desktop">{{email}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {% endblock content %}
